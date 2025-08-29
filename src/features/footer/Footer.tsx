@@ -1,13 +1,16 @@
+import { useTelegram } from "@hooks";
 import "./index.css";
+import { Button } from "@ui";
 
-type FooterProps = {
-  onClick: () => void;
-};
+type FooterProps = {};
 
-const Footer = ({ onClick }: FooterProps) => {
+const Footer = () => {
+  const { onToggleButton, onClose } = useTelegram();
+
   return (
     <footer>
-      <button onClick={onClick}>Закрыть</button>
+      <Button onClick={onClose}>Закрыть</Button>
+      <Button onClick={onToggleButton}>Показать</Button>
     </footer>
   );
 };

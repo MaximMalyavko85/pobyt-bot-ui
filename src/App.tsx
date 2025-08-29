@@ -4,17 +4,15 @@ import "./App.css";
 import { Footer, Header } from "@features";
 import { About } from "@pages";
 import { useEffect } from "react";
-
-const tg = window.Telegram.WebApp;
+import { useTelegram } from "@hooks";
 
 function App() {
+  const { tg } = useTelegram();
+
   useEffect(() => {
     tg.ready();
   }, []);
 
-  const onClose = () => {
-    tg.close();
-  };
   return (
     <BrowserRouter>
       <Header />
@@ -23,7 +21,7 @@ function App() {
         <Route path="/about" element={<About />} />
         {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
-      <Footer onClick={onClose} />
+      <Footer />
     </BrowserRouter>
   );
 }

@@ -16,6 +16,8 @@ export default defineConfig(({ mode }) => {
         "@features": path.resolve(__dirname, "src/features"),
         "@entities": path.resolve(__dirname, "src/entities"),
         "@pages": path.resolve(__dirname, "src/pages"),
+        "@ui": path.resolve(__dirname, "src/shared/ui"),
+        "@hooks": path.resolve(__dirname, "src/shared/libs/hooks"),
       },
     },
   };

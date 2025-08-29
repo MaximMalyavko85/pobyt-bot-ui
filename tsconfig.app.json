@@ -12,6 +12,8 @@
       "@features": ["features"],
       "@entities": ["entities"],
       "@pages": ["pages"],
+      "@ui": ["shared/ui"],
+      "@hooks": ["shared/libs/hooks"],
     },
 
     /* Bundler mode */
